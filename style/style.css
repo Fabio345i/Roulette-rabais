@@ -1,0 +1,13 @@
+header {
+  background-image: url("/img/header.png");
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: 3px solid black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}/*# sourceMappingURL=style.css.map */
