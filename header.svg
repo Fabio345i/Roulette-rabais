@@ -1,0 +1,6 @@
+<svg width="400" height="100">
+    <rect width="400" height="200" fill="#ba6c6c"/>
+    <path d="M402 100 C402 100, 402 100, 402 0 C400 -4, 300 -2, 150 -3 C150 0, 50 20, 100 190" fill="#d94e4e" stroke-width="2" stroke="black"/>
+    <path d="M402 100 C402 100, 402 100, 402 0 C400 -4, 200 -2, 250 -3 C250 -3, 50 20, 120 190" fill="#d42020" stroke-width="2" stroke="black"/>
+    <path d="M402 100 C402 100, 402 100, 402 0 C400 -4, 200 -2, 350 -3 C350 -3, 50 20, 230 190" fill="#780b0b" stroke-width="2" stroke="black"/>
+</svg>
