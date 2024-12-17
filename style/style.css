@@ -1,0 +1,17 @@
+body {
+  background-image: url("../img/background.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+header {
+  background-color: #b13d3e;
+}
+header img {
+  width: 25%;
+  height: auto;
+}
+
+footer {
+  background-color: #b13d3e;
+}/*# sourceMappingURL=style.css.map */
