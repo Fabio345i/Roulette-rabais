@@ -14,7 +14,7 @@
     <header class="py-5">
         <div class="container container-fluid text-center">
             <img class="img-fluid" src="img/logo_sans_ecu.jpg" alt="Logo QE">
-        </div>  
+        </div>
     </header>
     <section>
         <div class="container my-3">
@@ -28,26 +28,42 @@
                                     <label for="email">Adresse courriel</label>
                                     <input type="email" class="form-control" id="email" name="email"
                                         placeholder="Entrez votre adresse courriel ici">
+                                    <div id="erreurEmail" class="invalid-feedback" style="display: none;">
+                                        Veuillez entrer un courriel valide.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="telephone">Numéro de téléphone</label>
-                                    <input type="number" class="form-control" id="telephone" name="telephone"
+                                    <input type="text" class="form-control" id="telephone" name="telephone"
                                         placeholder="Entrez votre numéro de téléphone ici">
+                                    <div class="form-text">Veuillez mettre les tirets (-) manuellement.</div>
+                                    <div id="erreurTelephone" class="invalid-feedback" style="display: none;">
+                                        Veuillez entrer un numéro de téléphone valide.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="nom">Nom</label>
                                     <input type="text" class="form-control" id="nom" name="nom"
                                         placeholder="Entrez votre nom ici">
+                                    <div id="erreurNom" class="invalid-feedback" style="display: none;">
+                                        Veuillez entrer un nom valide.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="prenom">Prénom</label>
                                     <input type="text" class="form-control" id="prenom" name="prenom"
                                         placeholder="Entrez votre prénom ici">
+                                    <div id="erreurPrenom" class="invalid-feedback" style="display: none;">
+                                        Veuillez entrer un prénom valide.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="codePoste">Code postal</label>
                                     <input type="text" class="form-control" id="codePostal" name="codePostal"
                                         placeholder="Entrez votre numéro de code postal ici">
+                                    <div id="erreurCodePostal" class="invalid-feedback" style="display: none;">
+                                        Veuillez entrer un code postal valide.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <input type="checkbox" class="form-check-input" id="chkbEmail">
@@ -55,7 +71,7 @@
                                         confirmation.</label>
                                 </div>
                                 <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary">Tourner la roue !</button>
+                                    <button id="btnSoumettre" type="submit" class="btn btn-primary">Tourner la roue !</button>
                                 </div>
                             </form>
                         </div>
@@ -73,6 +89,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-<script src="js/index.js"></script>
+<script src="js/index.js" defer></script>
 
 </html>
