@@ -14,4 +14,11 @@ header img {
 
 footer {
   background-color: #b13d3e;
+}
+
+#wheelCanvas {
+  border: 2px solid #ccc;
+  background: white;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=style.css.map */

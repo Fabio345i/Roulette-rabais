@@ -7,10 +7,11 @@ const prenom = document.getElementById("prenom");
 const codePostal = document.getElementById("codePostal")
 const confirmation = document.getElementById("chkbEmail");
 const btnSoumettre = document.getElementById("btnSoumettre")
+const codesValides = ["G0A", "G3B", "G2A", "G3E", "G3B", "G3C"]
 
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const regexTelephone = /^\+?[0-9]{1,4}?[-.\s]?(\(?\d{1,4}\)?[-.\s]?){1,5}\d{1,4}$/;
-const regexCodePostal = /^[GHJ]\d[A-Za-z] \d[A-Za-z]\d$/;
+const regexTelephone = /^\d{3}-\d{3}-\d{4}$/;
+const regexCodePostal = /^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/;
 
 function verifier_email(){
     if (regexEmail.test(email.value.trim())){
@@ -35,7 +36,7 @@ function verifier_telephone(){
 }
 
 function verifier_nom(){
-    if (nom.value.trim() > 0){
+    if (nom.value.trim().length > 0){
         nom.classList.remove("is-invalid");
         document.getElementById("erreurNom").setAttribute("style", "display: none;");
         return true;
@@ -46,7 +47,7 @@ function verifier_nom(){
 }
 
 function verifier_prenom(){
-    if (prenom.value.trim() > 0){
+    if (prenom.value.trim().length > 0){
         prenom.classList.remove("is-invalid");
         document.getElementById("erreurPrenom").setAttribute("style", "display: none;");
         return true;
@@ -56,12 +57,14 @@ function verifier_prenom(){
     return false;
 }
 
-function verifier_code_postal(){
-    if (regexCodePostal.test(codePostal.value.trim())){
+function verifier_code_postal() {
+    const postalCode = codePostal.value.toUpperCase();
+    if (codesValides.some(code => postalCode.includes(code))) {
         codePostal.classList.remove("is-invalid");
         document.getElementById("erreurCodePostal").setAttribute("style", "display: none;");
         return true;
     }
+    alert("Désolé, mais ce service n'est pas disponible pour ce code postal.");
     codePostal.classList.add("is-invalid");
     document.getElementById("erreurCodePostal").setAttribute("style", "display: block;");
     return false;
