@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="300"  viewBox="0 0 150 300">    
+    <rect width="150" height="300" x="0" y="0" fill="white" />
+    <circle cx="70" cy="250" r="4" fill="url(#grad2)" />
+    <circle cx="80" cy="30" r="4" fill="url(#grad2)" />
+    
+    <circle cx="10" cy="180" r="4" fill="url(#grad3)" />
+    <circle cx="135" cy="298" r="4" fill="url(#grad3)" />
+    <circle cx="120" cy="120" r="4" fill="url(#grad3)" />
+    <circle cx="10" cy="50" r="8" fill="url(#grad3)" />
+    <circle cx="120" cy="220" r="15" fill="url(#grad3)" />
+    <circle cx="60" cy="90" r="20" fill="url(#grad3)" />
+    <circle cx="130" cy="20" r="50" fill="url(#grad3)" />
+
+    <circle cx="40" cy="300" r="25" fill="url(#grad3)" />
+    <circle cx="40" cy="300" r="17" fill="white" />
+    <circle cx="150" cy="160" r="30" fill="url(#grad3)" />
+    <circle cx="150" cy="160" r="20" fill="white" />
+    <circle cx="40" cy="-6" r="25" fill="url(#grad3)" />
+    <circle cx="40" cy="-6" r="17" fill="white" />
+
+    <text x="25" y="150" font-family="Verdana" font-size="15" font-weight="bold" fill="url(#grad3)">
+        Bienvenue!
+    </text>
+    <text x="32" y="160" font-family="Verdana" font-size="5" fill="url(#grad3)">
+        Connectez-vous pour continuer
+    </text>
+
+    <defs>
+        <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#7d0179" />
+            <stop offset="100%" stop-color="#e93600" />
+        </linearGradient>
+        <linearGradient id="grad2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ad65ab" />
+            <stop offset="100%" stop-color="#ff6536" />
+        </linearGradient>
+    </defs>
+</svg>
