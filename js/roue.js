@@ -23,18 +23,18 @@ function creerRoue(){
         'canvasId': 'wheelCanvas',
         'numSegments': 12,
         'segments': [
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#89f26e', 'text': '10%'},
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#89f26e', 'text': '10%'},
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#7de6ef', 'text': '15%'},
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#89f26e', 'text': '10%'},
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#89f26e', 'text': '10%'},
-            { 'fillStyle': '#eae56f', 'text': '5% et lavage à pression'},
-            { 'fillStyle': '#7de6ef', 'text': '15%'}
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#91047c', 'text': '10%'},
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#91047c', 'text': '10%'},
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#bb169d', 'text': '15%'},
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#91047c', 'text': '10%'},
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#91047c', 'text': '10%'},
+            { 'fillStyle': '#e93600', 'text': '5% et lavage à pression'},
+            { 'fillStyle': '#bb169d', 'text': '15%'}
         ],
         'animation': {
             'type': 'spinToStop',  // Spin animation
