@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,15 @@
     <link rel="icon" href="favicon.ico">
     <title>Qualité étudiant</title>
 </head>
+
 <body>
     <header class="py-5">
         <div class="container container-fluid text-center">
             <img class="img-fluid" src="img/logo_sans_ecu.jpg" alt="Logo QE">
-        </div>  
+        </div>
     </header>
-    <h1 style="text-align: center;">Custom Spinning Wheel</h1>
-    <div style="text-align: center;">
+    <h1 style="text-align: center;" class="mt-5">Custom Spinning Wheel</h1>
+    <div style="text-align: center;" class="mb-5">
         <canvas id="wheelCanvas" width="500" height="500"></canvas>
         <br>
         <button id="btnSpin" onclick="startSpin()" style="margin-top: 20px; font-size: 18px;">Spin the Wheel!</button>
@@ -29,12 +31,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
     <script src="https://raw.githack.com/zarocknz/javascript-winwheel/master/Winwheel.js"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script>
-        (function() {
-            emailjs.init("4yRK6KeviZ1Wn7cDf");
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "4yRK6KeviZ1Wn7cDf",
+            });
         })();
     </script>
-    <script src="js/roue.js"></script>
+    <script type="module" src="js/roue.js"></script>
 </body>
+
 </html>

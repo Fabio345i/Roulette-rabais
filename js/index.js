@@ -1,17 +1,22 @@
 "use strict"
 
 const email = document.getElementById("email");
+export const courriel = email
 const telephone = document.getElementById("telephone");
+export const tel = telephone
 const nom = document.getElementById("nom");
+export const name = nom
 const prenom = document.getElementById("prenom");
+export const pren = prenom
 const codePostal = document.getElementById("codePostal")
+export const codeP = codePostal
 const confirmation = document.getElementById("chkbEmail");
+export const conf = confirmation
 const btnSoumettre = document.getElementById("btnSoumettre")
 const codesValides = ["G0A", "G3B", "G2A", "G3E", "G3B", "G3C"]
 
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regexTelephone = /^\d{3}-\d{3}-\d{4}$/;
-const regexCodePostal = /^[A-Za-z]\d[A-Za-z] \d[A-Za-z]\d$/;
 
 function verifier_email(){
     if (regexEmail.test(email.value.trim())){
@@ -84,11 +89,15 @@ function authentifier(){
     let code_postal_valide = verifier_code_postal();
     let confirmation_par_courriel = verifier_confirmation_par_courriel();
     if (email_valide && telephone_valide && nom_valide && prenom_valide && code_postal_valide){
-        if (confirmation_par_courriel){
-            // TODO :
-            // Code pour envoyer un courriel de confirmation
-        }
-        window.location.href = "../roue.html"
+        const params = new URLSearchParams({
+            email: email.value,
+            telephone: telephone.value,
+            nom: nom.value,
+            prenom: prenom.value,
+            codePostal: codePostal.value,
+            confirmation: confirmation.checked
+        });
+        window.location.href = `../roue.html?${params.toString()}`;
     }
     
 }
