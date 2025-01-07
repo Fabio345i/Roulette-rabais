@@ -106,3 +106,74 @@ footer{
     max-width: 100%;
     height: auto;
 }
+
+/* General styles */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Wheel Section */
+.parentRoue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.sectionRoue canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Button */
+.boutonRoue {
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer p {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .sectionRoue canvas {
+        width: 90%;
+        height: auto;
+    }
+
+    .boutonRoue {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    .sectionRoue canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    .boutonRoue {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+}

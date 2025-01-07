@@ -14,6 +14,7 @@ let myWheel
 let offre
 
 const courrielEsteban = "egagnon@qualiteetudiants.com"
+const courrielCharles = "chcorriveau17@gmail.com"
 const courrielJustine = "jpichette@qualiteetudiants.com"
 const codesEsteban = ["G2A", "G3E", "G3B", "G3C"]
 const codesJustine = ["G0A", "G3B"]
@@ -58,26 +59,38 @@ window.startSpin = function() {
 function alertPrize(indicatedSegment) {
     offre = indicatedSegment.text;
     let courrielQE
+    let courrielCC = ""
     const postalCode = formData.codeP.toUpperCase();
-    if (codesEsteban.some(code => postalCode.includes(code))) 
+    if (postalCode.includes("G3B")){
         // courrielQE = courrielEsteban
-        courrielQE = "maliceultime@gmail.com"
+        // courrielCC = `${courrielJustine}, ${courrielCharles}`
+        courrielQE = "fabiomg2006@icloud.com"
+        courrielCC = "puchithebadboyz@gmail.com, thetroller320@gmail.com"
+    }
+    else if (codesEsteban.some(code => postalCode.includes(code))){
+        // courrielQE = courrielEsteban
+        // courrielCC = courrielCharles
+        courrielQE = "fabiomg2006@icloud.com"
+        courrielCC = "thetroller320@gmail.com"
+    }
     else if (codesJustine.some(code => postalCode.includes(code)))
         // courrielQE = courrielJustine
-    courrielQE = "dussault.gagnons@gmail.com"
-    envoyerMailQE(courrielQE)
+        courrielQE = "puchithebadboyz@gmail.com"
+    envoyerMailQE(courrielQE, courrielCC)
     if (formData.conf)
+        console.log("entre pour envoyer mail client")
         envoyerMailClient()
     alert(`Félicitions ! Vous avez gagné ${offre} de rabais!`);
 }
 
-function envoyerMailQE(courrielQE) {
+function envoyerMailQE(courrielQE, courrielCC) {
     emailjs.send("service_4q5ap02", "template_flr4wic", {
         nom_client: formData.name,
         prenom_client: formData.pren,
         tel_client: formData.tel,
         courriel_client: formData.courriel,
         courriel_qe: courrielQE,
+        courriel_cc: courrielCC,
         offre_client: offre
     })
     .then((response) => {
