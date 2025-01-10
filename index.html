@@ -66,7 +66,15 @@
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <input type="checkbox" class="form-check-input" id="chkbEmail">
+                                <label for="travaux">Type de travaux</label>
+                                <input type="text" class="form-control" id="travaux" name="typeTravaux"
+                                    placeholder="Type de travaux (Clôture, revêtement, etc)" required>
+                                <div id="erreurTravaux" class="invalid-feedback" style="display: none;">
+                                    Veuillez entrer le type de travaux.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <input type="checkbox" class="form-check-input" id="chkbEmail" name="confirmation" checked>
                                 <label class="form-check-label" for="chkbEmail">Recevoir votre rabais par courriel.</label>
                             </div>
                             <div class="d-grid">
