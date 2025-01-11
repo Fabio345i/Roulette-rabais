@@ -17,7 +17,9 @@ let offre
 const courrielEsteban = "egagnon@qualiteetudiants.com"
 const courrielCharles = "chcorriveau17@gmail.com"
 const courrielJustine = "jpichette@qualiteetudiants.com"
-const codesEsteban = ["G2A", "G3E", "G3B", "G3C"]
+const telEsteban = "581 990-6887"
+const telJustine = "581 997-4775"
+const codesEsteban = ["G2A", "G3E", "G3B", "G3C", "G3G"]
 const codesJustine = ["G0A", "G3B"]
 
 function creerRoue(){
@@ -61,20 +63,25 @@ function alertPrize(indicatedSegment) {
     offre = indicatedSegment.text;
     let courrielQE
     let courrielCC = ""
+    let tel_qe
     const postalCode = formData.codeP.toUpperCase();
     if (postalCode.includes("G3B")){
         courrielQE = courrielEsteban
         courrielCC = `${courrielJustine}, ${courrielCharles}`
+        tel_qe = `Esteban: ${telEsteban}, Justine: ${telJustine}`
     }
     else if (codesEsteban.some(code => postalCode.includes(code))){
         courrielQE = courrielEsteban
         courrielCC = courrielCharles
+        tel_qe = `Esteban: ${telEsteban}`
     }
-    else if (codesJustine.some(code => postalCode.includes(code)))
+    else if (codesJustine.some(code => postalCode.includes(code))){
         courrielQE = courrielJustine
+        tel_qe = `Justine: ${telJustine}`
+    }
     envoyerMailQE(courrielQE, courrielCC)
     if (formData.conf)
-        envoyerMailClient()
+        envoyerMailClient(courrielQE, tel_qe)
     alert(`Félicitations ! Vous avez gagné ${offre} de rabais!`);
 }
 
@@ -96,12 +103,14 @@ function envoyerMailQE(courrielQE, courrielCC) {
     });
 }
 
-function envoyerMailClient() {
+function envoyerMailClient(courrielQE, tel_qe) {
     emailjs.send("service_4q5ap02", "template_alfns7o", {
         nom_client: formData.name,
         prenom_client: formData.pren,
         courriel_client: formData.courriel,
-        offre_client: offre
+        offre_client: offre,
+        tel: tel_qe,
+        courriel_qe: courrielQE
     })
     .then((response) => {
         console.log("SUCCESS!", response.status, response.text);

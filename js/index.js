@@ -15,7 +15,7 @@ export const conf = confirmation
 const btnSoumettre = document.getElementById("btnSoumettre")
 const typeTravaux = document.getElementById("travaux")
 export const trav = typeTravaux
-const codesValides = ["G0A", "G3B", "G2A", "G3E", "G3B", "G3C"]
+const codesValides = ["G0A", "G3B", "G2A", "G3E", "G3B", "G3C", "G3G"]
 
 const regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const regexTelephone = /^\d{3}-\d{3}-\d{4}$/;
