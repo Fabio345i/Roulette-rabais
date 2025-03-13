@@ -19,8 +19,9 @@ const courrielCharles = "chcorriveau17@gmail.com"
 const courrielJustine = "jpichette@qualiteetudiants.com"
 const telEsteban = "581 990-6887"
 const telJustine = "581 997-4775"
-const codesEsteban = ["G2A", "G3E", "G3B", "G3C", "G3G"]
+const codesEsteban = ["G2A", "G3E", "G3B", "G3C", "G3G", "G2N", "G0A"]
 const codesJustine = ["G0A", "G3B"]
+// G0A 4V0 à ajouter au complet et la verif aussi
 
 function creerRoue(){
     myWheel = new Winwheel({
